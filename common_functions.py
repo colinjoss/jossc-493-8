@@ -20,7 +20,6 @@ def new_boat(datastore, client, content):
     })
     client.put(boat)
     boat['id'] = boat.key.id
-    boat['self'] = URL + '/boats/' + str(boat.key.id)
     client.put(boat)
     return boat
 
